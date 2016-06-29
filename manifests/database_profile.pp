@@ -1,16 +1,17 @@
 class wordpress_app::database_profile (
   String $bind_address = '0.0.0.0',
+  String $port         = '3306',
 ) {
   class { 'mysql::server':
      override_options => {
        'mysqld'       => {
          'bind_address' => '0.0.0.0',
-         'port'         => '3306',
+         'port'         => $port,
        },
      },
   }
-  firewall { '3306 allow apache-mysql':
-    dport  => ['3306'],
+  firewall { '${port} allow apache-mysql':
+    dport  => [$port],
     proto  => tcp,
     action => accept,
   }

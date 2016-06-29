@@ -38,6 +38,6 @@ define wordpress_app::database(
 }
 Wordpress_app::Database produces Database {
   host     => $::fqdn,
-  port     => '3306',
+  port     => $wordpress_app::database_profile::port,
   provider => 'tcp',
 }
