@@ -15,7 +15,7 @@ define wordpress_app::web(
 
   $int =  $interface ? {
     /\S+/   => $::networking['interfaces'][$interface]['ip'],
-    default => $::ipaddress },
+    default => $::ipaddress }
 
   apache::vhost { $::fqdn:
     priority   => '10',
