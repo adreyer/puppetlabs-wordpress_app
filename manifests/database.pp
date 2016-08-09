@@ -36,8 +36,9 @@ define wordpress_app::database(
     user       => "${user}@localhost",
   }
 }
+
 Wordpress_app::Database produces Database {
   host     => $::fqdn,
-  port     => '3306',
+  port     => lookup('wordpress_app::database_profile::port'),
   provider => 'tcp',
 }

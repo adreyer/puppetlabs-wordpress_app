@@ -7,6 +7,7 @@
   "source": "https://github.com/puppetlabs/puppetlabs-wordpress_app",
   "project_page": "https://github.com/puppetlabs/puppetlabs-wordpress_app",
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "data_provider": "hiera",
  "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -59,7 +60,6 @@
     {"name":"hunner-wordpress","version_requirement":">=1.0.0 <2.0.0"},
     {"name":"hunner-wordpress","version_requirement":">=1.0.0 <2.0.0"},
     {"name":"jfryman-selinux","version_requirement":">=0.4.0 <0.5.0"}
-  ],
-  "data_provider": null
+  ]
 }
 
